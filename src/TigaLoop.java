@@ -35,6 +35,35 @@ public class TigaLoop {
         } while (k <= n);
         System.out.println();
 
+        // Bukti meleset satu (off-by-one): dua penghitung terpisah
+        int kurang = 0;
+        for (int i = 1; i < n; i++) {
+            kurang++;
+        }
+        int kurangSama = 0;
+        for (int i = 1; i <= n; i++) {
+            kurangSama++;
+        }
+        System.out.println();
+        System.out.println("i <  n berputar : " + kurang + " kali");
+        System.out.println("i <= n berputar : " + kurangSama + " kali");
+
+        // Saringan deret 1..10 dengan continue dan break
+        int sampaiPrintln = 0;
+        System.out.print("Disaring :");
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            if (i > 7) {
+                break;
+            }
+            System.out.print(" " + i);
+            sampaiPrintln++;
+        }
+        System.out.println();
+        System.out.println("Sampai println  : " + sampaiPrintln + " kali");
+
         input.close();
     }
-}
+}5
